@@ -1,6 +1,6 @@
 #Author: Thomas S
 #Date:18 Oct 18
-#Desc: This basic program shows the syntax of lists in python. 
+#Desc: This simple program shows the syntax of lists in python. 
 #Functions: title(), append(), insert(), pop(), remove(), sort(),sort(reverse=True), sorted(), reverese() 
 #            len()
 
