@@ -81,9 +81,3 @@ size = len(car_makes)
 print(size)
 
 
-
-
-
-
-
-
