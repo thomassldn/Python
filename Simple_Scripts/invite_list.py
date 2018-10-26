@@ -25,18 +25,3 @@ for x in email_recipients:
 #You are invited ..
 
 #end of program 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#end of program 
