@@ -1,6 +1,6 @@
 #Author: Thomas S
 #Date: 26 Oct 18
-#Desc:Small program that emails a group of people in a list personal emails
+#Desc:Small program that sends a mass messeage to a group of people in a list
 
 #start of program
 email_recipients = ['Alex', 'John', "Anthony", "Jose"]
