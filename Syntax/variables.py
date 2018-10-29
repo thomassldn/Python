@@ -1,6 +1,7 @@
 #Author: Thomas S
 #Date:11 Oct 18
 #Desc:This simple program demonstrates the use of variables and data types
+#Functions Used: title(), upper(),lower(), rstrip()
 
 #=======================================================
 #create a variable message and print it                 
