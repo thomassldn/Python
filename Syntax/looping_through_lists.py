@@ -90,32 +90,3 @@ square = (3,4)
 print("Square's dimensions: ")
 print(square[0])
 print(square[1])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#end of program 
