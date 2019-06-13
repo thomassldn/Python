@@ -1,0 +1,12 @@
+To copy or paste large text files into your python programs, use the python pyperclip module. 
+
+To install, EX) 
+C:\Users\<USER>\Program Files\Python 3.5\Scripts>pip.exe install pyperclip 
+
+
+Use the copy() and paste() pyperclip functions to copy and paste text into your programs:
+
+>>>pyperclip.copy('Hello World")
+
+>>>pyperclip.paste()
+'Hello World'
