@@ -1,3 +1,2 @@
-
-
 find()                            (finds what index a letter is in a string, EX) index = message.find(a))
+len()                             (finds lenght of a string, EX) len(NAME))
