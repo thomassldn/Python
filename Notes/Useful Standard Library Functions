@@ -1,5 +1,7 @@
 find()                            (finds what index a letter is in a string, Ex) index = message.find(a))
 len()                             (finds lenght of a string, Ex) len(NAME))
+upper()                           (output a string in upper case)
+lowwer()                          (output a string in lower case)
 input()                           (get user input, Ex) name = input("What is your name?")
 int(input())                      (get user inputs, ints only, Ex) age = int(input("What is your age?)))
 float(input())                    (same as above input() function, except for floats)
@@ -27,3 +29,17 @@ sort(reverse=true)                (sort a list permanently but in reverse order)
 sorted()                          (sort a list temporarly, Ex) someList.sorted())
 reverse()                         (reverse a list, Ex) someList.reverse())
 len()                             (get length of list, Ex) size = len(someList))
+range()                           (generates list numbers in a range, Ex) someList = list(range(1,11)))
+max()                             (get max number in a list, Ex) print(max(someList))) 
+min()                             (get min number in a list, Ex) print(min(someList))) 
+sum()                             (get sum of a list, Ex) print(sum(someList)))
+
+
+
+
+
+
+
+
+
+
