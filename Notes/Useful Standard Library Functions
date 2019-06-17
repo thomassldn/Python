@@ -1,2 +1,10 @@
-find()                            (finds what index a letter is in a string, EX) index = message.find(a))
-len()                             (finds lenght of a string, EX) len(NAME))
+find()                            (finds what index a letter is in a string, Ex) index = message.find(a))
+len()                             (finds lenght of a string, Ex) len(NAME))
+
+Dictionaries
+================================================================================================================
+items()                           (returns a list of keyvalue pairs in a dictionary, Ex) dic.items())
+keys()                            (returns a list of keys in a dictionary, Ex) dic.keys()
+sorted()                          (sorts the keys in a dictionary, Ex) sorted(dic))
+values()                          (returns a list of values in a dictionary, Ex) dic.values())
+set()                             (returns a list of values without any duplicates, Ex) set(dic.values()))
