@@ -1,5 +1,10 @@
 find()                            (finds what index a letter is in a string, Ex) index = message.find(a))
 len()                             (finds lenght of a string, Ex) len(NAME))
+input()                           (get user input, Ex) name = input("What is your name?")
+int(input())                      (get user inputs, ints only, Ex) age = int(input("What is your age?)))
+float(input())                    (same as above input() function, except for floats)
+
+
 
 Dictionaries
 ================================================================================================================
@@ -8,3 +13,17 @@ keys()                            (returns a list of keys in a dictionary, Ex) d
 sorted()                          (sorts the keys in a dictionary, Ex) sorted(dic))
 values()                          (returns a list of values in a dictionary, Ex) dic.values())
 set()                             (returns a list of values without any duplicates, Ex) set(dic.values()))
+
+
+Lists 
+================================================================================================================
+title()                           (capitalize string titel, Ex) somelist[3].title())
+append()                          (add elements to the end of a list, Ex) somelist.append('Apple'))
+insert()                          (insert an element anywhere in a list, Ex) somelist.insert(1,'Orange'))
+pop()                             (pop an item from the end of a list or end of a list, Ex) somelist.pop(), Ex) somelist.pop(1))
+remove()                          (remove an item from a list by value, Ex) carList.remove('Toyota'))
+sort()                            (sort a list permanently, Ex) someList.sort())
+sort(reverse=true)                (sort a list permanently but in reverse order)
+sorted()                          (sort a list temporarly, Ex) someList.sorted())
+reverse()                         (reverse a list, Ex) someList.reverse())
+len()                             (get length of list, Ex) size = len(someList))
