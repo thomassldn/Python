@@ -54,4 +54,22 @@ else:
 
 
  print("Your message decrypted is: " + encryptedmsg)
+ 
+ #Sample Output
+# 
+#Encrypt:
+#==========================
+## python myCeaserCipher.py
+#Would you like to encrypt of decrypt a message(Enter e to encrypt, d to decrypt):e
+#Enter a message to encrypt using the ceaser cipher: Meet me at 0800. Same spot.
+#Your message encrypted is: Zrr7JzrJn7JIGIIMJfnzrJ6327M
+
+  
+#Decrypt:
+#==========================
+# # python myCeaserCipher.py
+#Would you like to encrypt of decrypt a message(Enter e to encrypt, d to decrypt):d
+#Enter a message to decrypt using the ceaser cipher: Zrr7JzrJn7JIGIIMJfnzrJ6327M
+#Your message decrypted is: Meet me at 0800. Same spot.
+
 
