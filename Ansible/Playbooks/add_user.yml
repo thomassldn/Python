@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Add the user ats with a bash shell, appending the group admins to the users groups
+      user:
+        name: ats
+        comment: ats user
+        group: users
+        password: "{{ 'password' | password_hash('sha512') }}"
+        shell: /bin/bash
