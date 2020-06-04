@@ -1,0 +1,16 @@
+---
+- hosts: local
+  tasks:
+
+    - name: Creating an Ansible user
+      user:
+        name: ansible
+        password: "$6$29sgpqgbIsSkTa1a$qQ3ApfNtwB5L.K9sVIeCZeUAOn.RGV7Y1WyrE/Kw.euYLoki2CU1iGoAk/5Rro2chB.SwoD.iAGjaAPEhOYdO0"
+        comment: "Ansible User"
+        groups: root                 #empty by default
+        state: present
+        shell: /bin/bash             #defaults to /bin/bash
+        system: no                   #defaults to no
+        createhome: yes              #defaults to yes
+        home: /home/ansible          #defaults to /home/<user_name>
+
