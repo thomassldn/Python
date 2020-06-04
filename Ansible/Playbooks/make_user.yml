@@ -14,3 +14,6 @@
         createhome: yes              #defaults to yes
         home: /home/ansible          #defaults to /home/<user_name>
 
+# To generate hashed password: 
+# python -c 'import crypt,getpass;print (crypt.crypt(getpass.getpass()))'
+#Password:
