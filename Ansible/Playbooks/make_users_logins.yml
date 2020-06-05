@@ -1,0 +1,20 @@
+---
+- hosts: local
+  tasks:
+
+    - name: Creating user regularuser
+      user:
+        name: "{{ item }}"
+        password: "$6$29sgpqgbIsSkTa1a$qQ3ApfNtwB5L.K9sVIeCZeUAOn.RGV7Y1WyrE/Kw.euYLoki2CU1iGoAk/5Rro2chB.SwoD.iAGjaAPEhOYdO0"
+        comment: "Some User"
+        groups: root                 #empty by default
+        state: present
+        shell: /bin/bash             #defaults to /bin/bash
+        system: no                   #defaults to no
+        createhome: yes              #defaults to yes
+        #home: /home/regularuser          #defaults to /home/<user_name>
+      with_items:
+        - regularuser
+        - switcheduser
+        - guestuser
+        - restricteduser
