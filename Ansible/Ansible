@@ -21,6 +21,10 @@ Adhoc commands (/usr/bin/ansible)
 #ansible all  -m user -a "name=ats update_password=always password={{ 'password' | password_hash('sha512') }}" --ask-pass        (change user password)
 
 
+Roles
+=====================================================================================================================
+#ansible-galaxy init /etc/ansible/roles/apache --offline                       (create ansible role directory structure) 
+
 
 Modules
 ======
