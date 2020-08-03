@@ -5,6 +5,7 @@
 General commands
 ====================================================================================================================
 #Ansible all -m setup  (view facts about your nodes, can be used to create conditions)
+#ansible-playbook <playbook_name>.yml     (run a playbook) 
 
 Adhoc commands (/usr/bin/ansible)
 =====================================================================================================================
