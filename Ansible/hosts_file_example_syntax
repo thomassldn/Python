@@ -1,0 +1,35 @@
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+## green.example.com
+## blue.example.com
+## 192.168.100.1127.180.129.16
+## 192.168.100.10
+
+[all:vars]
+ansible_user=admin1
+ansible_ssh_pass=PASSWORD
+ansible_port=22 
+
+[local]
+LOCAL-HOST ansible_host=sb-hyv-cent-01-03.sbd.harrisdev.local
+
+[SHCPROD]
+SHC-PROD ansible_host=127.210.193.211 ansible_port=10022
+SHC-PROD3 ansible_host=127.24.68.197 ansible_port=10022
+SHC-PROD4 ansible_host=127.45.138.179 ansible_port=10022
+
+[SHCDEV]
+SHC-TEST ansible_host=127.133.144.250 ansible_port=10022
+SBQPM1G1 ansible_host=127.214.230.230 ansible_port=10022
+SBQPM2G1 ansible_host=127.82.247.44 ansible_port=10022
+SBQPMDB ansible_host=127.41.130.232 ansible_port=10022
