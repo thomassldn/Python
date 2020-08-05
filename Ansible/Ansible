@@ -10,6 +10,7 @@ General commands
 Adhoc commands (/usr/bin/ansible)
 =====================================================================================================================
 #ansible --version                                                             (view ansible version and other related information)
+#ansible node1 --list-hosts                                                    (list hosts)
 #ansible 10.157.4.66 -a "/sbin/reboot" -f 12  --ask-pass                       (reboot server, ask for password)
 #ansbile all -m shell -a ' <command> ' --user <user> --ask-pass                (simple adhoc shell command)
 #ansible linuxservers -m copy -a "src=/qmd/cpr/sw/file.txt dest=/qmd"          (transfer a file)
