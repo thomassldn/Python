@@ -10,7 +10,8 @@ General commands
 Adhoc commands (/usr/bin/ansible)
 =====================================================================================================================
 #ansible --version                                                             (view ansible version and other related information)
-#ansible-doc -l | grep -i user                                                 (list ansible modules)
+#ansible-doc -l | grep -i yum                                                  (list ansible modules)
+#ansible-doc yum                                                               (view how to use module)
 #ansible node1 --list-hosts                                                    (list hosts)
 #ansible all -m command -a 'uname -r' -o                                       (run a command against hosts)
 #ansible 10.157.4.66 -a "/sbin/reboot" -f 12  --ask-pass                       (reboot server, ask for password)
