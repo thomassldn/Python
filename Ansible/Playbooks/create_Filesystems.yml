@@ -1,0 +1,40 @@
+---
+ - hosts: Test
+   user: root
+   tasks:
+
+         ######## Create VGs ########
+
+       - name: Create qcprdatavg VG
+         lvg:
+           vg: qcprdatavg
+           pvs: /dev/sdb
+
+         ######## Create LVs ########
+
+       - name: Create corelv LV
+         lvol:
+           vg: qcprdatavg
+           lv: corelv
+           size: 1G
+
+       ##### Create file systems #####
+
+       - name: Create corelv File System
+         filesystem:
+           fstype: ext4
+           dev: /dev/qcprdatavg/corelv
+
+
+        ###### Mount File Systems #####
+
+       - name: Mount corelv
+         mount:
+           path: /qmd/core_files
+           src: /dev/qcprdatavg/corelv
+           fstype: ext4
+           state: mounted
+
+
+
+
