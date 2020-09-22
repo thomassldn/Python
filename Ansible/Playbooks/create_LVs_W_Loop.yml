@@ -1,0 +1,27 @@
+---
+ - hosts: Test
+   user: root
+   vars:
+    LVs_1G: [ qmdlv, cchlv, corelv, qcprlv, binlv, kslv, nojlv, tchlv, errlv, sysblv, sfillv, syslv, ensdemolv, cuserlv, mprliblv, cdoclv, cliblv, ensliblv, caudlv, csmplv, bkplv, cachelv, apchlv, dojlv, enslv, csplv, etclv  ] #list of LVs that are 1G in size
+
+
+   tasks:
+
+       ######## Create VGs ########
+
+       - name: Create qcprdatavg VG
+         lvg:
+           vg: qcprdatavg
+           pvs: /dev/sdb
+
+       ######## Create LVs ########
+
+       - name: Create  LVs of Size 1G
+         lvol:
+           vg: qcprdatavg
+           lv: "{{ item  }}" #create all 1G LVs in the LVs_1G list above
+           size: 1G
+         loop: "{{ LVs_1G }}"
+         
+         
+         
