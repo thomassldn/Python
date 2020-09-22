@@ -7,7 +7,7 @@
 
    tasks:
 
-       ######## Create VGs ########
+       ######## Create VG ########
 
        - name: Create qcprdatavg VG
          lvg:
