@@ -1,0 +1,45 @@
+---
+ - hosts: Test
+   user: root
+   vars:
+    LVs_1G: { qmdlv: '/qmd', cchlv: '/qmd/cache_rhpdev_1', corelv: '/qmd/core_files', qcprlv: '/qmd/cpr/ucd/RHPDEV1', binlv: '/qmd/cache_rhpdev_1/bin', kslv: '/qmd/cpr/ucd/RHPDEV1/dbase/keystore', nojlv: '/qmd/cpr/ucd/RHPDEV1/dbase/nojo', tchlv: '/qmd/cpr/ucd/RHPDEV1/dbase/tcache', errlv: '/qmd/cpr/ucd/RHPDEV1/dbase/error', sysblv: '/qmd/cpr/ucd/RHPDEV1/dbase/cprsysb', sfillv: '/qmd/cpr/ucd/RHPDEV1/sfiles', syslv: '/qmd/cpr/ucd/RHPDEV1/dbase/cprsys', ensdemolv: '/qmd/cache_rhpdev_1/mgr/ensdemo', cuserlv: '/qmd/cache_rhpdev_1/mgr/user', mprliblv: '/qmd/cache_rhpdev_1/mgr/mprllib', cdoclv: '/qmd/cache_rhpdev_1/mgr/docbook', cliblv: '/qmd/cache_rhpdev_1/mgr/cachelib', ensliblv: '/qmd/cache_rhpdev_1/mgr/enslib', caudlv: '/qmd/cache_rhpdev_1/mgr/cacheaudit', csmplv: '/qmd/cache_rhpdev_1/mgr/samples', bkplv: '/qmd/cache_rhpdev_1/mgr/Backup', cachelv: '/qmd/cache_rhpdev_1/mgr/cache', apchlv: '/qmd/apache', dojlv: '/qmd/cpr/ucd/RHPDEV1/dbase/dojo', enslv: '/qmd/cache_rhpdev_1/mgr/ensemble', csplv: '/qmd/cpr/ucd/RHPDEV1/qcprCSP', etclv: '/qmd/cpr/ucd/RHPDEV1/qcprETC' } #dictionary of LVs that are 1G in size
+
+   tasks:
+
+       ######## Create VGs ########
+
+       - name: Create qcprdatavg VG
+         lvg:
+           vg: qcprdatavg
+           pvs: /dev/sdb
+
+       ######## Create LVs ########
+
+       - name: Create  LVs of Size 1G
+         lvol:
+           vg: qcprdatavg
+           lv: "{{ item.key  }}" #create all 1G LVs in the LVs_1G list above
+           size: 1G
+         with_dict: "{{ LVs_1G }}"
+
+       ##### Create file systems #####
+
+       - name: Create File Systems of Size 1G
+         filesystem:
+           fstype: ext4
+           dev: "/dev/qcprdatavg/{{ item.key }}"
+         with_dict: "{{ LVs_1G }}"
+
+       ###### Mount File Systems #####
+
+       - name: Mount corelv
+         mount:
+           path: "{{ item.value }}"
+           src: "/dev/qcprdatavg/{{ item.key }}"
+           fstype: ext4
+           state: mounted
+         with_dict: "{{ LVs_1G }}"
+         
+         
+         
+         
