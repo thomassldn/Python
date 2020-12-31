@@ -1,3 +1,7 @@
+#Binary Search, recursive
+#time complexity O(log n)
+#best time O(1)
+
 def binarySearch(arr, l, r, x ):
     #check if r >= l
     if r >= l :
