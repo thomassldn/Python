@@ -36,3 +36,12 @@ if index == -1:
   print("Value does not exist in array!")
 else:
   print("Value exist at index: ", index)
+
+#Output:
+#Array before sorting: [5, 9, 33, 1, 99, 44, 2, 7]
+#Array after sorting:  [1, 2, 5, 7, 9, 33, 44, 99]
+
+#Value exist at index:  7
+
+
+
