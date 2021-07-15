@@ -1,3 +1,8 @@
+#Bubble Sort
+#Thomas Saldana
+#3 March 2019
+#Avg Time Complexity: O(n^2), O(n) when array is sorted. 
+
 def bubbleSort(arr):
     temp = 0;
     for i in range(len(arr) - 1):
