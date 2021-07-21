@@ -1,5 +1,6 @@
 #Sha-256 hash algorthim
-#Thomas
+#Thomas S
+#21 June 2021
 
 import hashlib
 
