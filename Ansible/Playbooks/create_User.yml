@@ -5,6 +5,7 @@
       user:
         name: ats
         comment: ats user
-        group: users
-        password: "{{ 'password' | password_hash('sha512') }}"
+        group: admin
+        password: "{{ 'password123' | password_hash('sha512') }}"
         shell: /bin/bash
+
