@@ -6,7 +6,8 @@ General commands
 ====================================================================================================================
 #ansible all -m setup  (view facts about your nodes, can be used to create conditions)
 #ansible all -m ping --ask-pass -u <user>
-#ansible-playbook <playbook_name>.yml --ask-pass  (run a playbook) 
+#ansible-playbook <playbook>.yml --ask-pass  (run a playbook) 
+#ansible-playbook <playbook>.yml -kK -u <user> (ask for password and ask for sudo password)
 #ansible-playbook --syntax-check <playbook_name>.yml
 
 Adhoc commands (/usr/bin/ansible)
