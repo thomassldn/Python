@@ -9,7 +9,7 @@ class Node:
         self.next = None
 
 #Create Class Linked List
-class LinkedList():
+class LinkedList:
     def __init__(self):
         self.head = None
     #Print Linked LinkedList
